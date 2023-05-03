@@ -94,7 +94,7 @@ export default {
     }
   },
   methods: {
-    add(todo) {
+    add() {
       this.todo = {}
       this.dialog = true
     },
