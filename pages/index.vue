@@ -112,8 +112,8 @@ export default {
       this.$store.commit('updateTodo', payload)
       this.close()
     },
-    remove() {
-      const payload = {todo: this.todo}
+    remove(item) {
+      const payload = {todo: item}
       this.$store.commit('removeTodo', payload)
     },
     close() {
