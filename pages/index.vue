@@ -13,6 +13,12 @@
           label="検索"
           single-line/>
       </v-card-title>
+
+      <v-btn fab dark small color="dark" class="mb-2" @click="add">
+        <v-icon dark>
+          mdi-plus
+        </v-icon>
+      </v-btn>
       <v-data-table
         :headers="headers"
         :items="todos"
@@ -21,6 +27,42 @@
         sort-by="id"
         :sort-desc="true"
         class="elevation-1">
+        <template v-slot:top>
+          <v-dialog v-model="dialog" max-width="500px">
+            <v-card>
+              <v-card-title>
+                <span class="headline">{{ formTitle }}</span>
+              </v-card-title>
+              <v-card-text>
+                <v-container>
+                  <v-row>
+                    <v-col cols="12">
+                      <v-text-field v-model="todo.task" label="タスク"/>
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </v-card-text>
+              <v-card-actions>
+                <v-spacer/>
+                <v-btn @click="close">閉じる</v-btn>
+                <v-btn v-if="isPersistedTodo" class="primary" @click="update">
+                  更新する
+                </v-btn>
+                <v-btn v-else class="primary" @click="create">追加する</v-btn>
+                <v-spacer/>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
+        </template>
+
+        <template v-slot:[`item.actions`]="{item}">
+          <v-icon small @click="edit(item)">
+            mdi-pencil
+          </v-icon>
+          <v-icon small @click="remove(item)">
+            mdi-delete
+          </v-icon>
+        </template>
       </v-data-table>
     </v-card>
   </v-layout>
@@ -36,12 +78,47 @@ export default {
         {text: 'タスク', value: 'task'},
         {text: '操作', value: 'actions'},
       ],
-      todo: {}
+      todo: {},
+      dialog: false
     }
   },
   computed: {
     todos() {
       return this.$store.getters.getTodos
+    },
+    isPersistedTodo() {
+      return !!this.todo.id
+    },
+    formTitle() {
+      return this.isPersistedTodo ? 'TODO編集' : 'TODO追加'
+    }
+  },
+  methods: {
+    add(todo) {
+      this.todo = {}
+      this.dialog = true
+    },
+    create() {
+      const payload = {todo: this.todo}
+      this.$store.commit('addTodo', payload)
+      this.close()
+    },
+    edit(todo) {
+      this.todo = Object.assign({}, todo)
+      this.dialog = true
+    },
+    update() {
+      const payload = {todo: this.todo}
+      this.$store.commit('updateTodo', payload)
+      this.close()
+    },
+    remove() {
+      const payload = {todo: this.todo}
+      this.$store.commit('removeTodo', payload)
+    },
+    close() {
+      this.dialog = false
+      this.todo = {}
     }
   }
 
