@@ -69,6 +69,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
@@ -93,28 +95,37 @@ export default {
       return this.isPersistedTodo ? 'TODO編集' : 'TODO追加'
     }
   },
+  async asyncData() {
+    const response = await axios.get('/api/todos');
+    return {todos: response.data}
+  },
   methods: {
     add() {
       this.todo = {}
       this.dialog = true
     },
-    create() {
-      const payload = {todo: this.todo}
-      this.$store.commit('addTodo', payload)
+    async create() {
+      await axios.post('/api/todos', this.todo)
+        .then(() => {
+          this.$router.app.refresh()
+        })
       this.close()
     },
     edit(todo) {
       this.todo = Object.assign({}, todo)
       this.dialog = true
     },
-    update() {
-      const payload = {todo: this.todo}
-      this.$store.commit('updateTodo', payload)
-      this.close()
+    async update(todo) {
+      await axios.put('api/todos/' + todo.id, todo)
+        .then(() => {
+          this.$router.app.refresh()
+        })
     },
-    remove(item) {
-      const payload = {todo: item}
-      this.$store.commit('removeTodo', payload)
+    async remove(todo) {
+      await axios.delete('api/todos/' + todo.id, todo)
+        .then(() => {
+          this.$router.app.refresh()
+        })
     },
     close() {
       this.dialog = false
