@@ -107,7 +107,7 @@ export default {
     async create() {
       await axios.post('/api/todos', this.todo)
         .then(() => {
-          this.$router.app.refresh()
+          this.$nuxt.refresh()
         })
       this.close()
     },
@@ -118,13 +118,13 @@ export default {
     async update(todo) {
       await axios.put('api/todos/' + todo.id, todo)
         .then(() => {
-          this.$router.app.refresh()
+          this.$nuxt.refresh()
         })
     },
     async remove(todo) {
       await axios.delete('api/todos/' + todo.id, todo)
         .then(() => {
-          this.$router.app.refresh()
+          this.$nuxt.refresh()
         })
     },
     close() {
