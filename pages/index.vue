@@ -69,7 +69,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 
 export default {
   data() {
@@ -95,8 +94,8 @@ export default {
       return this.isPersistedTodo ? 'TODO編集' : 'TODO追加'
     }
   },
-  async asyncData() {
-    const response = await axios.get('/api/todos');
+  async asyncData({app}) {
+    const response = await app.$axios.get('/api/todos/');
     return {todos: response.data}
   },
   methods: {
@@ -105,7 +104,7 @@ export default {
       this.dialog = true
     },
     async create() {
-      await axios.post('/api/todos', this.todo)
+      await this.$axios.post('/api/todos', this.todo)
         .then(() => {
           this.$nuxt.refresh()
         })
@@ -116,13 +115,13 @@ export default {
       this.dialog = true
     },
     async update(todo) {
-      await axios.put('api/todos/' + todo.id, todo)
+      await this.$axios.put('api/todos/' + todo.id, todo)
         .then(() => {
           this.$nuxt.refresh()
         })
     },
     async remove(todo) {
-      await axios.delete('api/todos/' + todo.id, todo)
+      await this.$axios.delete('api/todos/' + todo.id, todo)
         .then(() => {
           this.$nuxt.refresh()
         })

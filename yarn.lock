@@ -929,7 +929,7 @@
 
 "@babel/runtime@^7.15.4":
   version "7.21.5"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.21.5.tgz#8492dddda9644ae3bda3b45eabe87382caee7200"
+  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.21.5.tgz"
   integrity sha512-8jI69toZqqcsnqGGqwGS4Qb1VwLOEp4hz+CXPywcvjs60u3B4Pom/U/7rm4W8tMOYEB+E9wgD0mW1l3r8qlI9Q==
   dependencies:
     regenerator-runtime "^0.13.11"
@@ -1844,7 +1844,7 @@
 
 "@nuxtjs/axios@^5.13.6":
   version "5.13.6"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.13.6.tgz#6f4bbd98a3a7799a5d2c0726c6ad2a98aa111881"
+  resolved "https://registry.npmjs.org/@nuxtjs/axios/-/axios-5.13.6.tgz"
   integrity sha512-XS+pOE0xsDODs1zAIbo95A0LKlilvJi8YW0NoXYuq3/jjxGgWDxizZ6Yx0AIIjZOoGsXJOPc0/BcnSEUQ2mFBA==
   dependencies:
     "@nuxtjs/proxy" "^2.1.0"
@@ -1855,7 +1855,7 @@
 
 "@nuxtjs/proxy@^2.1.0":
   version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/proxy/-/proxy-2.1.0.tgz#fa7715a11d237fa1273503c4e9e137dd1bf5575b"
+  resolved "https://registry.npmjs.org/@nuxtjs/proxy/-/proxy-2.1.0.tgz"
   integrity sha512-/qtoeqXgZ4Mg6LRg/gDUZQrFpOlOdHrol/vQYMnKu3aN3bP90UfOUB3QSDghUUK7OISAJ0xp8Ld78aHyCTcKCQ==
   dependencies:
     http-proxy-middleware "^1.0.6"
@@ -2033,7 +2033,7 @@
 
 "@types/http-proxy@^1.17.5":
   version "1.17.11"
-  resolved "https://registry.yarnpkg.com/@types/http-proxy/-/http-proxy-1.17.11.tgz#0ca21949a5588d55ac2b659b69035c84bd5da293"
+  resolved "https://registry.npmjs.org/@types/http-proxy/-/http-proxy-1.17.11.tgz"
   integrity sha512-HC8G7c1WmaF2ekqpnFq626xd3Zz0uvaqFmBJNRZCGEZCXkvSdJoNFn/8Ygbd9fKNQj8UzLdCETaI0UWPAjK7IA==
   dependencies:
     "@types/node" "*"
@@ -2785,7 +2785,7 @@ available-typed-arrays@^1.0.5:
 
 axios-retry@^3.1.9:
   version "3.4.0"
-  resolved "https://registry.yarnpkg.com/axios-retry/-/axios-retry-3.4.0.tgz#f464dbe9408e5aa78fa319afd38bb69b533d8854"
+  resolved "https://registry.npmjs.org/axios-retry/-/axios-retry-3.4.0.tgz"
   integrity sha512-VdgaP+gHH4iQYCCNUWF2pcqeciVOdGrBBAYUfTY+wPcO5Ltvp/37MLFNCmJKo7Gj3SHvCSdL8ouI1qLYJN3liA==
   dependencies:
     "@babel/runtime" "^7.15.4"
@@ -2793,7 +2793,7 @@ axios-retry@^3.1.9:
 
 axios@^0.21.1:
   version "0.21.4"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
+  resolved "https://registry.npmjs.org/axios/-/axios-0.21.4.tgz"
   integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
   dependencies:
     follow-redirects "^1.14.0"
@@ -4509,7 +4509,7 @@ etag@^1.8.1, etag@~1.8.1:
 
 eventemitter3@^4.0.0:
   version "4.0.7"
-  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
+  resolved "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.7.tgz"
   integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
 
 events@^3.0.0:
@@ -4780,7 +4780,7 @@ flush-write-stream@^1.0.0:
 
 follow-redirects@^1.0.0, follow-redirects@^1.14.0:
   version "1.15.2"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
+  resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.2.tgz"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
 
 for-each@^0.3.3:
@@ -5316,7 +5316,7 @@ http-proxy-agent@^5.0.0:
 
 http-proxy-middleware@^1.0.6:
   version "1.3.1"
-  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-1.3.1.tgz#43700d6d9eecb7419bf086a128d0f7205d9eb665"
+  resolved "https://registry.npmjs.org/http-proxy-middleware/-/http-proxy-middleware-1.3.1.tgz"
   integrity sha512-13eVVDYS4z79w7f1+NPllJtOQFx/FdUW4btIvVRMaRlUY9VGstAbo5MOhLEuUgZFRHn3x50ufn25zkj/boZnEg==
   dependencies:
     "@types/http-proxy" "^1.17.5"
@@ -5327,7 +5327,7 @@ http-proxy-middleware@^1.0.6:
 
 http-proxy@^1.18.1:
   version "1.18.1"
-  resolved "https://registry.yarnpkg.com/http-proxy/-/http-proxy-1.18.1.tgz#401541f0534884bbf95260334e72f88ee3976549"
+  resolved "https://registry.npmjs.org/http-proxy/-/http-proxy-1.18.1.tgz"
   integrity sha512-7mz/721AbnJwIVbnaSv1Cz3Am0ZLT/UBwkC92VlxhXv/k/BBQfM2fXElQNC27BVGr0uwUpplYPQM9LnaBMR5NQ==
   dependencies:
     eventemitter3 "^4.0.0"
@@ -5670,7 +5670,7 @@ is-plain-obj@^1.0.0:
 
 is-plain-obj@^3.0.0:
   version "3.0.0"
-  resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-3.0.0.tgz#af6f2ea14ac5a646183a5bbdb5baabbc156ad9d7"
+  resolved "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-3.0.0.tgz"
   integrity sha512-gwsOE28k+23GP1B6vFl1oVh/WOzmawBrKwo5Ev6wMKzPkaXaCDIQKzLnvsA42DRlbVTWorkgTKIviAKCWkfUwA==
 
 is-plain-object@^2.0.3, is-plain-object@^2.0.4:
@@ -5695,7 +5695,7 @@ is-regex@^1.1.4:
 
 is-retry-allowed@^2.2.0:
   version "2.2.0"
-  resolved "https://registry.yarnpkg.com/is-retry-allowed/-/is-retry-allowed-2.2.0.tgz#88f34cbd236e043e71b6932d09b0c65fb7b4d71d"
+  resolved "https://registry.npmjs.org/is-retry-allowed/-/is-retry-allowed-2.2.0.tgz"
   integrity sha512-XVm7LOeLpTW4jV19QSH38vkswxoLud8sQ57YwJVTPWdiaI9I8keEhGFpBlslyVsgdQy4Opg8QOLb8YRgsyZiQg==
 
 is-shared-array-buffer@^1.0.2:

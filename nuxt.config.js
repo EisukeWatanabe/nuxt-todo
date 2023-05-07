@@ -45,7 +45,7 @@ export default {
     '@nuxtjs/proxy'
   ],
   axios: {
-    proxy: true
+    baseURL: 'http://localhost:8080',
   },
   proxy: {
     '/api/': {target: process.env.API_URL || 'http://localhost:8080', pathRewrite: {'^/api/': ''}}
